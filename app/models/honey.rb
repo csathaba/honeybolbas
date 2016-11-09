@@ -1,0 +1,2 @@
+class Honey < ApplicationRecord
+end

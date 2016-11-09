@@ -1,0 +1,1 @@
+json.partial! "honeys/honey", honey: @honey

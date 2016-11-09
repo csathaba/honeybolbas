@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @honey.name %>
+</p>
+
+<p>
+  <strong>Description en:</strong>
+  <%= @honey.description_en %>
+</p>
+
+<p>
+  <strong>Description de:</strong>
+  <%= @honey.description_de %>
+</p>
+
+<%= link_to 'Edit', edit_honey_path(@honey) %> |
+<%= link_to 'Back', honeys_path %>
