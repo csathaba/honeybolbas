@@ -86,27 +86,6 @@
 </section> -->
 
 
-<% (1..4).each do |i| %>
-  <div class="gallery-modal modal fade" id="Honey_<%= i %>" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
-          <div class="lr">
-            <div class="rl">
-            </div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="modal-body">
-            <%= image_tag "honey/H_s_#{i}.jpg", class: "img-responsive img-centered" %>
-            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-<% end %>
-
 <!-- Portfolio Modal 1 -->
 <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">

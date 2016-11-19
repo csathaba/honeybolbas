@@ -122,48 +122,43 @@ a:focus {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   }
 }
-
-header {
+.intro {
+  display: table;
   width: 100%;
   height: auto;
-  background-image: asset-data-url("bg/bg_1.jpg");
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center center;
-  @include background-cover;
-  // background-size: contain;
+  padding: 100px 0;
   text-align: center;
   color: white;
-  .intro-text {
-    padding-top: 100px;
-    padding-bottom: 50px;
-    .intro-lead-in {
-      // @include serif-font;
-      font-style: italic;
-      font-size: 22px;
-      line-height: 22px;
-      margin-bottom: 25px;
-    }
-    .intro-heading {
-      // @include heading-font;
-      width: 50%;
-      font-weight: 700;
-      font-size: 50px;
-      line-height: 50px;
-      margin-top: 50px;
-      margin-bottom: 25px;
-      color: $color_navbar_a;
-    }
-  }
+  background: asset-data-url("bg/bg_1.jpg") no-repeat bottom center scroll;
+  background-color: black;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
 }
-
-@media(min-width:300px) {
-  header {
+.intro .intro-body {
+  display: table-cell;
+  vertical-align: middle;
+}
+.intro .intro-body .brand-heading {
+  font-size: 40px;
+  color: $color_navbar_a;
+}
+.intro .intro-body .intro-text {
+  font-size: 18px;
+}
+@media (min-width: 768px) {
+  .intro {
     height: 100%;
     padding: 0;
-    }
+  }
+  .intro .intro-body .brand-heading {
+    font-size: 60px;
+  }
+  .intro .intro-body .intro-text {
+    font-size: 26px;
+  }
 }
-
 .btn-circle {
   width: 70px;
   height: 70px;
