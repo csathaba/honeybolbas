@@ -469,3 +469,163 @@ body {
     display: none;
   }
 }
+
+
+
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: $font_text;
+  color: black;
+  background-color: white;
+  webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
+}
+html {
+  width: 100%;
+  height: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 35px 0 35px;
+  // text-transform: uppercase;
+  font-family: $font_text;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+p {
+  margin: 0 0 25px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+@media (min-width: 768px) {
+  p {
+    margin: 0 0 35px;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+}
+a {
+  color: $color_a;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: #1d9b6c;
+}
+.light {
+  font-weight: 400;
+}
+
+
+
+.navbar-custom {
+  margin-bottom: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  // text-transform: uppercase;
+  font-family: $font_nav;
+  background-color: black;
+}
+.navbar-custom .navbar-toggle {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+  font-size: 12px;
+}
+.navbar-custom .navbar-toggle:focus,
+.navbar-custom .navbar-toggle:active {
+  outline: none;
+}
+.navbar-custom .navbar-brand {
+  font-weight: 700;
+  font-family: $font_nav;
+}
+.navbar-custom .navbar-brand:focus {
+  outline: none;
+}
+.navbar-custom a {
+  color: $color_navbar_a;
+}
+.navbar-custom .nav li a {
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+}
+.navbar-custom .nav li a:hover {
+  color: rgba(255, 255, 255, 0.8);
+  outline: none;
+  background-color: transparent;
+}
+.navbar-custom .nav li a:focus,
+.navbar-custom .nav li a:active {
+  outline: none;
+  background-color: transparent;
+}
+.navbar-custom .nav li.active {
+  outline: none;
+}
+.navbar-custom .nav li.active a {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.navbar-custom .nav li.active a:hover {
+  color: white;
+}
+@media (min-width: 768px) {
+  .navbar-custom {
+    padding: 20px 0;
+    border-bottom: none;
+    letter-spacing: 1px;
+    background: transparent;
+    -webkit-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+    -moz-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+    transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+  }
+  .navbar-custom.top-nav-collapse {
+    padding: 0;
+    background: black;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
+}
+
+
+
+.content-section {
+  width: 100%;
+  padding: 100px 0;
+  color: $color_contact;
+  background-image: asset-data-url("bg/bg_2.jpg");
+  background-attachment: scroll;
+  background-position: center center;  background-color: black;
+  @include background-cover;
+}
+@media(min-width:767px) {
+  .content-section {
+    padding-top: 100px;
+  }
+}
+
+
+.content-section {
+  padding-top: 100px;
+}
+@media(min-width:767px) {
+  .content-section {
+    padding-top: 100px;
+  }
+}
+
+.contact-section {
+  width: 100%;
+  padding: 100px 0;
+  color: $color_contact;
+  background-image: asset-data-url("bg/bg_2.jpg");
+  background-attachment: scroll;
+  background-position: center center;  background-color: black;
+  @include background-cover;
+}
