@@ -36,7 +36,7 @@
 </section>
 
 
-<!-- Portfolio Grid Section -->
+<!-- Gallery Grid Section -->
 <section id="gallery" class="bg-light-gray">
   <div class="container content-section">
     <div class="row">
@@ -46,8 +46,15 @@
     </div>
     <div class="row">
       <% (1..4).each do |i| %>
-        <div class="col-md-4 col-sm-6 portfolio-item">
-          <%= link_to image_tag("honey/H_s_#{i}.jpg", class: "img-responsive img-honey"), "#Honey_#{i}", class: "portfolio-link", data: { toggle: "modal" } %>
+        <div class="col-md-4 col-sm-6 gallery-item">
+          <%= link_to "#Honey_#{i}", class: "gallery-link", data: { toggle: "modal" } do %>
+            <div class="gallery-hover">
+              <div class="gallery-hover-content">
+                <i class="fa fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <%= image_tag "honey/H_s_1.jpg", class: "img-responsive img-honey" %>
+          <% end %>
         </div>
       <% end %>
     </div>
@@ -72,7 +79,7 @@
 
 
 <% (1..4).each do |i| %>
-  <div class="portfolio-modal modal fade" id="Honey_<%= i %>" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="gallery-modal modal fade" id="Honey_<%= i %>" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="close-modal" data-dismiss="modal">
