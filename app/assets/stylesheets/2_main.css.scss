@@ -44,7 +44,7 @@ p {
     font-size: 30px;
     line-height: 1.5;
     @media(min-width:768px) {
-        margin: 0 0 35px;
+        margin: 0 0 25px;
         font-size: 30px;
         line-height: 1.6;
     }
@@ -228,17 +228,18 @@ header {
 
 
 .content-section {
-  padding-top: 100px;
+  padding-top: 50px;
 }
 @media(min-width:767px) {
   .content-section {
-    padding-top: 100px;
+    padding-top: 50px;
   }
 }
 
 .contact-section {
   width: 100%;
   padding: 100px 0;
+  font-weight: 700;
   color: $color_contact;
   background-image: asset-data-url("bg/bg_2.jpg");
   background-attachment: scroll;
@@ -275,11 +276,14 @@ header {
 ul.banner-social-buttons {
   margin-top: 0;
 }
-ul.honey_list li {
+ul.honey_list {
+  margin-bottom: 15px;
+  li {
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   padding: 0;
-  font-size: 20px;
+  font-size: 30px;
+  }
 }
 @media (max-width: 1199px) {
   ul.banner-social-buttons {
