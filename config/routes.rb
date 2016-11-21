@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
   get 'welcome/index'
-
   resources :honeys
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  scope "(:locale)", locale: /en|de|hu/ do
+    root :to => 'welcome#index'
+    get "welcome/index"
+    resources :honeys
+  end
 
   root "welcome#index"
 
