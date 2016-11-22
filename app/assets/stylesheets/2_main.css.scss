@@ -70,7 +70,7 @@ a {
     margin-bottom: 0;
     border-bottom: 1px solid rgba(white, 0.3);
     // text-transform: uppercase;
-    font-size: 20px;
+    font-size: 24px;
     font-family: $font_nav;
     background-color: black;
     a {
@@ -87,7 +87,7 @@ a {
         }
     }
     .navbar-brand {
-        font-size: 24px;
+        font-size: 28px;
         font-weight: 700;
         &:focus {
             outline: none;
@@ -172,7 +172,7 @@ header {
       // @include heading-font;
       width: 50%;
       font-weight: 700;
-      font-size: 50px;
+      font-size: 60px;
       line-height: 50px;
       margin-top: 50px;
       margin-bottom: 25px;
