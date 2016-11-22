@@ -181,6 +181,31 @@ header {
   }
 }
 
+.header_welcome {
+  background-image: asset-data-url("bg/welcome_1.jpg");
+  .intro-text {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    .intro-heading {
+      // @include heading-font;
+      // width: 20%;
+      font-weight: 700;
+      font-size: 60px;
+      line-height: 80px;
+      // margin-top: 20%;
+      // margin-bottom: 25px;
+      width: auto;
+      color: $color_bg;
+      margin: 0;
+      position: absolute;
+      top: 60%;
+      left: 5%;
+      // margin-right: -50%;
+      // transform: translate(-50%, -50%)
+    }
+  }
+}
+
 @media(min-width:300px) {
   header {
     height: 100%;

@@ -1,14 +1,18 @@
 Rails.application.routes.draw do
   get 'welcome/index'
+  get 'main/index'
   resources :honeys
 
-  scope "(:locale)", locale: /en|de|hu/ do
-    root :to => 'welcome#index'
-    get "welcome/index"
+  root :to => 'welcome#index'
+
+  scope "/:locale" do
+    root :to => 'main#index'
+    get "main/index"
     resources :honeys
   end
-
-  root "welcome#index"
+  get "de/main/index"
+  get "en/main/index"
+  get "hu/main/index"
 
   get '*path' => redirect('/')
 end

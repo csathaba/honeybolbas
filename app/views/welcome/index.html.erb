@@ -1,91 +1,18 @@
 <!-- Header -->
-<header>
+<header class="header_welcome">
   <div class="container">
     <div class="intro-text">
-      <div class="intro-heading">Willkommen</div>
+      <div class="intro-heading">
+        Welcome  <br>
+        <%= link_to de_main_index_path do %>
+          <%= image_tag "flags/Germany_small.png" %>
+        <% end %>
+        <%= link_to en_main_index_path do %>
+          <%= image_tag "flags/United_Kingdom_small.png" %>
+        <% end %>
+        <%= link_to hu_main_index_path do %>
+          <%= image_tag "flags/Hungary_small.png" %>
+        <% end %>
+        </div>
     </div>
-  </div>
 </header>
-
-<!-- About Section -->
-<section id="varieties" class="container content-section contact-section text-center">
-  <div class="row">
-    <div class="col-lg-8 col-lg-offset-2">
-      <h2><%= t('varieties') %></h2>
-      <p><%= t('varieties_desc_1') %></p>
-      <ul class="honey_list">
-        <li><%= t('honey_akac') %></li>
-        <li><%= t('honey_hars') %></li>
-        <li><%= t('honey_repce') %></li>
-        <li><%= t('honey_napraforgo') %></li>
-        <li><%= t('honey_erdei') %></li>
-        <li><%= t('honey_vegyesvirag') %></li>
-      </ul>
-      <p><%= t('varieties_desc_2') %></p>
-    </div>
-  </div>
-</section>
-
-
-<!-- Gallery Grid Section -->
-<section id="gallery" class="bg-light-gray">
-  <div class="container content-section">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <h2 class="section-heading">Bilder</h2>
-      </div>
-    </div>
-    <div class="row">
-      <% (1..4).each do |i| %>
-        <div class="col-md-4 col-sm-6 gallery-item">
-          <%= link_to "#Honey_#{i}", class: "gallery-link", data: { toggle: "modal" } do %>
-            <div class="gallery-hover">
-              <div class="gallery-hover-content">
-                <i class="fa fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <%= image_tag "honey/H_s_#{i}.jpg", class: "img-responsive img-honey" %>
-          <% end %>
-        </div>
-      <% end %>
-    </div>
-  </div>
-</section>
-
-<!-- Contact Section -->
-<section id="contact" class="content-section text-center">
-  <div class="contact-section">
-    <div class="container">
-      <div class="col-lg-8 col-lg-offset-2">
-        <h2><%= t('contact') %></h2>
-<!--    <p>Feel free to email us!</p> -->
-        <p>Honig Bolbas <br>
-        www.honeybolbas.cloud <br>
-        info@honeybolbas.cloud <br>
-        +36 30 307 1157</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<% (1..4).each do |i| %>
-  <div class="gallery-modal modal fade" id="Honey_<%= i %>" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
-          <div class="lr">
-            <div class="rl">
-            </div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="modal-body">
-            <%= image_tag "honey/H_s_#{i}.jpg", class: "img-responsive img-centered" %>
-            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-<% end %>
