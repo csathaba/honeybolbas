@@ -120,3 +120,14 @@
         </div>
     </div>
 </div>
+
+<div class="col-md-4 col-sm-6 gallery-item">
+  <%= link_to "#Honey_1", class: "gallery-link", data: { toggle: "modal" } do %>
+    <div class="gallery-hover">
+      <div class="gallery-hover-content">
+        <i class="fa fa-plus fa-3x"></i>
+      </div>
+    </div>
+    <%= image_tag Honey.find(4).honeyimg.thumb.url, class: "img-responsive img-honey" %>
+  <% end %>
+</div>
