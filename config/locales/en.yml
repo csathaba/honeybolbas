@@ -20,6 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  title: "Honey Bolbas"
   varieties: "Varieties"
   gallery: "Gallery"
   contact: "Contact"
@@ -27,9 +28,9 @@ en:
   varieties_desc_1: "We sell high quality honey, directly from Hungarian producers in the following varieties:"
   varieties_desc_2: "Combined with dried fruits and/or different nuts."
   varieties_desc_3: "Nicely decorated, based on any special request as well."
-  honey_akac: "Acacia"
-  honey_hars: "Linden"
-  honey_repce: "Rapeseed"
-  honey_napraforgo: "Sunflower"
+  honey_akac: "Acacia honey"
+  honey_hars: "Lime-tree honey"
+  honey_repce: "Rape honey"
+  honey_napraforgo: "Sunflower honey"
   honey_erdei: "Wild honey"
-  honey_vegyesvirag: "Mixed blend"
+  honey_vegyesvirag: "Mixed flower honey"
