@@ -44,29 +44,20 @@
             <li>
               <a class="page-scroll" href="#contact"><%= t('contact') %></a>
             </li>
-<!--             <% if I18n.locale != :en %><li><%= link_to "English", main_index_path(locale: :en) %></li><% end %>
-            <% if I18n.locale != :de %><li><%= link_to "Deutch", main_index_path(locale: :de) %></li><% end %>
-            <% if I18n.locale != :hu %><li><%= link_to "Magyar", main_index_path(locale: :hu) %></li><% end %> -->
+            <% if user_signed_in? %>
+              <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
+            <% end %>
           </ul>
         </div>
-        <!-- /.navbar-collapse -->
       </div>
-      <!-- /.container -->
     </nav>
+    <% if notice %>
+      <p class="notice"><%= notice %></p>
+    <% elsif alert %>
+      <p class="alert"><%= alert %></p>
+    <% end %>
 
     <%= yield %>
 
-    <!-- Footer -->
-<!--     <footer>
-      <div class="container text-center">
-        <p>Copyright &copy; HoneyBolbas</p>
-      </div>
-    </footer> -->
-<!--     <footer>
-      <p><b>I18n.locale:</b>
-      <%= I18n.locale %>
-      </p>
-      <%= t('hello') %>
-    </footer> -->
   </body>
 </html>

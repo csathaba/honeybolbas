@@ -138,3 +138,20 @@
 <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
 <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
+<% if I18n.locale != :en %><li><%= link_to "English", main_index_path(locale: :en) %></li><% end %>
+<% if I18n.locale != :de %><li><%= link_to "Deutch", main_index_path(locale: :de) %></li><% end %>
+<% if I18n.locale != :hu %><li><%= link_to "Magyar", main_index_path(locale: :hu) %></li><% end %>
+
+<!-- Footer -->
+<footer>
+  <div class="container text-center">
+    <p>Copyright &copy; HoneyBolbas</p>
+  </div>
+</footer>
+<footer>
+  <p><b>I18n.locale:</b>
+  <%= I18n.locale %>
+  </p>
+  <%= t('hello') %>
+</footer>
+

@@ -1,5 +1,6 @@
 class HoneysController < ApplicationController
   before_action :set_honey, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /honeys
   # GET /honeys.json

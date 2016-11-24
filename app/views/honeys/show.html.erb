@@ -1,21 +1,22 @@
-<p id="notice"><%= notice %></p>
+<div class="skinny_wrapper wrapper_padding">
+  <%= image_tag @honey.honeyimg.url %>
 
-<%= image_tag @honey.honeyimg.url %>
+  <p>
+    <strong>Name:</strong>
+    <%= @honey.name %>
+  </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @honey.name %>
-</p>
+  <p>
+    <strong>Description en:</strong>
+    <%= @honey.description_en %>
+  </p>
 
-<p>
-  <strong>Description en:</strong>
-  <%= @honey.description_en %>
-</p>
+  <p>
+    <strong>Description de:</strong>
+    <%= @honey.description_de %>
+  </p>
 
-<p>
-  <strong>Description de:</strong>
-  <%= @honey.description_de %>
-</p>
-
-<%= link_to 'Edit', edit_honey_path(@honey) %> |
-<%= link_to 'Back', honeys_path %>
+  <%= link_to 'Edit', edit_honey_path(@honey) %> |
+  <%= link_to 'Delete', honey_path(@honey), method: :delete, data: { confirm: "Are you sure you want to delete this honey?"} %> |
+  <%= link_to 'Back', honeys_path %>
+</div>

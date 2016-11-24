@@ -1,6 +1,11 @@
-<h1>Editing Honey</h1>
+<h1 id="admin_title">Edit Honey</h1>
 
-<%= render 'form', honey: @honey %>
+<div class="skinny_wrapper wrapper_padding">
+  <%= render 'form', honey: @honey %>
 
-<%= link_to 'Show', @honey %> |
-<%= link_to 'Back', honeys_path %>
+  <%= link_to 'Show', @honey %> |
+  <%= link_to 'Delete', honey_path(@honey), method: :delete, data: { confirm: "Are you sure you want to delete this honey?"} %> |
+  <%= link_to 'Back', honeys_path %>
+</div>
+
+

@@ -42,6 +42,9 @@ class HoneyimgUploader < CarrierWave::Uploader::Base
   # end
 
   version :thumb do
+    process resize_to_fill: [60, 80, 'Center']
+  end
+  version :small do
     process resize_to_fill: [480, 640, 'Center']
   end
 
