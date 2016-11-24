@@ -36,15 +36,15 @@
       </div>
     </div>
     <div class="row">
-      <% (1..4).each do |i| %>
+      <% @honeys.each do |honey| %>
         <div class="col-md-4 col-sm-6 gallery-item">
-          <%= link_to "#Honey_#{i}", class: "gallery-link", data: { toggle: "modal" } do %>
+          <%= link_to "#Honey_#{honey.id}", class: "gallery-link", data: { toggle: "modal" } do %>
             <div class="gallery-hover">
               <div class="gallery-hover-content">
                 <i class="fa fa-plus fa-3x"></i>
               </div>
             </div>
-            <%= image_tag "honey/H_s_#{i}.jpg", class: "img-responsive img-rounded img-honey" %>
+            <%= image_tag honey.honeyimg.small.url, class: "img-responsive img-rounded img-honey" %>
           <% end %>
         </div>
       <% end %>
@@ -68,22 +68,24 @@
   </div>
 </section>
 
-<% (1..4).each do |i| %>
-  <div class="gallery-modal modal fade" id="Honey_<%= i %>" tabindex="-1" role="dialog" aria-hidden="true">
+<% @honeys.each do |honey| %>
+  <div class="gallery-modal modal fade" id="Honey_<%= honey.id %>" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
+<!--         <div class="close-modal" data-dismiss="modal">
           <div class="lr">
             <div class="rl">
             </div>
           </div>
-        </div>
-        <div class="container">
-          <div class="modal-body">
-            <%= image_tag "honey/H_s_#{i}.jpg", class: "img-responsive img-centered" %>
+        </div> -->
+        <!-- <div class="container"> -->
+          <!-- <div class="modal-body"> -->
+            <%= image_tag honey.honeyimg.url %>
+          <!-- </div> -->
+          <div class="skinny_wrapper wrapper_padding">
             <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
           </div>
-        </div>
+        <!-- </div> -->
       </div>
     </div>
   </div>
