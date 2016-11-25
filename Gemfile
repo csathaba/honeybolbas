@@ -34,6 +34,7 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 
 gem 'carrierwave', '~> 0.11.2'
 gem 'mini_magick', '~> 4.5', '>= 4.5.1'
+gem 'fog', '~> 1.38'
 
 gem 'devise', '~> 4.2'
 
