@@ -4,7 +4,12 @@
     <div class="intro-text">
       <div class="intro-heading">
         Welcome  <br>
-        <%= link_to de_main_index_path do %>
+        <h2>
+        <%= link_to "Magyar", hu_main_index_path %> &nbsp;
+        <%= link_to "English", en_main_index_path %> &nbsp;
+        <%= link_to "Deutsch", de_main_index_path %>
+        </h2>
+<!--         <%= link_to de_main_index_path do %>
           <%= image_tag "flags/Germany_small.png" %>
         <% end %>
         <%= link_to en_main_index_path do %>
@@ -12,7 +17,7 @@
         <% end %>
         <%= link_to hu_main_index_path do %>
           <%= image_tag "flags/Hungary_small.png" %>
-        <% end %>
+        <% end %> -->
         </div>
     </div>
 </header>

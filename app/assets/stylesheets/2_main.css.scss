@@ -182,6 +182,8 @@ header {
   }
 }
 
+
+
 .header_welcome {
   background-image: asset-data-url("bg/welcome_1.jpg");
   .intro-text {
@@ -203,6 +205,17 @@ header {
       left: 5%;
       // margin-right: -50%;
       // transform: translate(-50%, -50%)
+      a {
+        color: $color_bg;
+        -webkit-transition: all .2s ease-in-out;
+        -moz-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
+        &:hover,
+        &:focus {
+            text-decoration: none;
+            color: darken($color_a,20%);
+        }
+      }
     }
   }
 }
