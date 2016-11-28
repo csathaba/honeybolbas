@@ -70,6 +70,6 @@ class HoneysController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def honey_params
-      params.require(:honey).permit(:name, :description_en, :description_de, :honeyimg)
+      params.require(:honey).permit(:name, :description_hu, :description_en, :description_de, :honeyimg)
     end
 end

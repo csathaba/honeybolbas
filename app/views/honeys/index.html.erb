@@ -5,6 +5,7 @@
     <thead>
       <tr>
         <th>Name</th>
+        <th>Description hu</th>
         <th>Description en</th>
         <th>Description de</th>
         <th colspan="3"></th>
@@ -16,6 +17,7 @@
         <tr>
           <td><%= image_tag honey.honeyimg.thumb.url, class: "img-responsive img-honey" %></td>
           <td><%= honey.name %></td>
+          <td><%= honey.description_hu %></td>
           <td><%= honey.description_en %></td>
           <td><%= honey.description_de %></td>
           <td><%= link_to 'Show', honey %></td>
