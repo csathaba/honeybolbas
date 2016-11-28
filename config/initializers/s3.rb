@@ -15,6 +15,13 @@ CarrierWave.configure do |config|
     :region                => 'eu-central-1'
   }
   config.fog_directory    = ENV['S3_BUCKET_NAME']
+
+  if Rails.env.development?
+    config.storage = :file
+  else
+    config.storage = :fog
+  end
+
 end
 
   # # For testing, upload files to local `tmp` folder.
