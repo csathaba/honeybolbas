@@ -290,6 +290,7 @@ header {
 
 
 .btn {
+  background-color: darken($color_a,15%);
   text-transform: uppercase;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
@@ -300,15 +301,16 @@ header {
 }
 .btn-default {
   border: 1px solid #42DCA3;
-  color: #42DCA3;
+  color: darken($color_a,15%);
   background-color: transparent;
 }
+.btn:hover,
 .btn-default:hover,
 .btn-default:focus {
   border: 1px solid #42DCA3;
   outline: none;
-  color: black;
-  background-color: #42DCA3;
+  color: white;
+  background-color: darken($color_a,20%);
 }
 
 
@@ -429,8 +431,8 @@ img::-moz-selection {
 
 .gallery-modal {
   .modal-dialog{
-    margin: 3% 10%;
-    height: 100%;
+    margin: 1% 10%;
+    height: 60%;
     width: 80%;
   }
   .modal-content {
@@ -440,27 +442,27 @@ img::-moz-selection {
     box-shadow: none;
     border: none;
     min-height: 100%;
-    padding: 100px 0;
+    padding: 20px 20px;
     text-align: center;
     h2 {
       margin-bottom: 15px;
       font-size: 3em;
     }
     p {
-      margin-bottom: 30px;
+      margin-bottom: 10px;
     }
     p.item-intro {
-      margin: 20px 0 30px;
+      // margin: 20px 0 30px;
       // @include serif-font;
-      font-style: italic;
-      font-size: 16px;
+      // font-style: italic;
+      font-size: 30px;
     }
     ul.list-inline {
       margin-bottom: 30px;
       margin-top: 0;
     }
     img {
-      margin-bottom: 30px;
+      // margin-bottom: 30px;
     }
   }
   .close-modal {

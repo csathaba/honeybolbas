@@ -71,21 +71,18 @@
 <% @honeys.each do |honey| %>
   <div class="gallery-modal modal fade" id="Honey_<%= honey.id %>" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
+      <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
       <div class="modal-content">
-<!--         <div class="close-modal" data-dismiss="modal">
-          <div class="lr">
-            <div class="rl">
-            </div>
-          </div>
-        </div> -->
-        <!-- <div class="container"> -->
-          <!-- <div class="modal-body"> -->
-            <%= image_tag honey.honeyimg.url %>
-          <!-- </div> -->
-          <div class="skinny_wrapper wrapper_padding">
-            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-          </div>
-        <!-- </div> -->
+        <%= image_tag honey.honeyimg.small.url %>
+        <p class="item-intro">
+          <% if I18n.locale == :hu %>
+            <%= honey.description_hu %>
+          <% elsif I18n.locale == :de %>
+            <%= honey.description_de %>
+          <% else %>
+            <%= honey.description_en %>
+          <% end %>
+        </p>
       </div>
     </div>
   </div>
