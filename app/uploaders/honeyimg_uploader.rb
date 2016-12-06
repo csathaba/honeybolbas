@@ -45,7 +45,11 @@ class HoneyimgUploader < CarrierWave::Uploader::Base
     process resize_to_fill: [60, 80, 'Center']
   end
   version :small do
-    process resize_to_fill: [480, 640, 'Center']
+    if :width < :height
+      process resize_to_fill: [480, 640, 'Center']
+    else
+      process resize_to_fill: [640, 480, 'Center']
+    end
   end
 
   # Add a white list of extensions which are allowed to be uploaded.
