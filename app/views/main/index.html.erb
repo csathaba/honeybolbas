@@ -36,8 +36,22 @@
       </div>
     </div>
     <div class="row">
-      <% @honeys.each do |honey| %>
+      <% @honeys_portrait.each do |honey| %>
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 gallery-item">
+          <%= link_to "#Honey_#{honey.id}", class: "gallery-link", data: { toggle: "modal" } do %>
+            <div class="gallery-hover">
+              <div class="gallery-hover-content">
+                <i class="fa fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <%= image_tag honey.honeyimg.small.url, class: "img-responsive img-rounded img-honey" %>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+    <div class="row">
+      <% @honeys_landscape.each do |honey| %>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 gallery-item">
           <%= link_to "#Honey_#{honey.id}", class: "gallery-link", data: { toggle: "modal" } do %>
             <div class="gallery-hover">
               <div class="gallery-hover-content">

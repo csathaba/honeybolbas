@@ -42,15 +42,22 @@ class HoneyimgUploader < CarrierWave::Uploader::Base
   # end
 
   version :thumb do
-    process resize_to_fill: [60, 80, 'Center']
+      process resize_to_fill: [80, 80, 'Center']
   end
+
   version :small do
-    if :width < :height
-      process resize_to_fill: [480, 640, 'Center']
-    else
-      process resize_to_fill: [640, 480, 'Center']
-    end
+      process :process_original_version
   end
+
+  # version :small do
+  #   if :width < :height
+  #     process resize_to_fill: [480, 640, 'Center']
+  #   else
+  #     process resize_to_fill: [640, 480, 'Center']
+  #   end
+  # end
+
+
 
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:
@@ -63,5 +70,16 @@ class HoneyimgUploader < CarrierWave::Uploader::Base
   # def filename
   #   "something.jpg" if original_filename
   # end
+
+protected
+    def process_original_version
+        image = ::MiniMagick::Image::read(File.binread(@file.file))
+
+        if image[:width] > image[:height]
+            resize_to_fill 640, 480
+        else
+            resize_to_fill 480, 640
+        end
+    end
 
 end

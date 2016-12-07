@@ -364,7 +364,7 @@ img::-moz-selection {
     .gallery-link {
       display: block;
       position: relative;
-      max-width: 400px;
+      // max-width: 400px;
       margin: 0 auto;
       .gallery-hover {
         background: fade-out($color_a, .7);
