@@ -29,7 +29,7 @@ class HoneysController < ApplicationController
 
     respond_to do |format|
       if @honey.save
-        format.html { redirect_to @honey, notice: 'Honey was successfully created.' }
+        format.html { redirect_to honeys_url, notice: 'Honey was successfully created.' }
         format.json { render :show, status: :created, location: @honey }
       else
         format.html { render :new }
@@ -43,7 +43,7 @@ class HoneysController < ApplicationController
   def update
     respond_to do |format|
       if @honey.update(honey_params)
-        format.html { redirect_to @honey, notice: 'Honey was successfully updated.' }
+        format.html { redirect_to honeys_url, notice: 'Honey was successfully updated.' }
         format.json { render :show, status: :ok, location: @honey }
       else
         format.html { render :edit }
