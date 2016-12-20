@@ -15,4 +15,5 @@
 //= require jquery_ujs
 //= require jquery.easing
 //= require turbolinks
+//= require lightbox
 //= require_tree .

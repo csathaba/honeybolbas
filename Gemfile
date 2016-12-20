@@ -37,6 +37,7 @@ gem 'mini_magick', '~> 4.5', '>= 4.5.1'
 gem 'fog', '~> 1.38'
 
 gem 'devise', '~> 4.2'
+gem 'lightbox2-rails', '~> 2.8', '>= 2.8.2.1'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

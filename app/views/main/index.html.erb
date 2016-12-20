@@ -39,7 +39,7 @@
     <div class="row">
       <% @honeys_portrait.each do |honey| %>
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 gallery-item">
-          <%= link_to "#Honey_#{honey.id}", class: "gallery-link", data: { toggle: "modal" } do %>
+          <%= link_to honey.honeyimg.small.url, class: "gallery-link", data: { lightbox: "gallery", title: render(partial: "data_title", locals: {honey: honey}) } do %>
             <div class="gallery-hover">
               <div class="gallery-hover-content">
                 <i class="fa fa-plus fa-3x"></i>
@@ -53,7 +53,7 @@
     <div class="row">
       <% @honeys_landscape.each do |honey| %>
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 gallery-item">
-          <%= link_to "#Honey_#{honey.id}", class: "gallery-link", data: { toggle: "modal" } do %>
+          <%= link_to honey.honeyimg.small.url, class: "gallery-link", data: { lightbox: "gallery", title: render(partial: "data_title", locals: {honey: honey}) } do %>
             <div class="gallery-hover">
               <div class="gallery-hover-content">
                 <i class="fa fa-plus fa-3x"></i>
@@ -86,26 +86,3 @@
     </div>
   </div>
 </section>
-
-<% @honeys.each do |honey| %>
-  <div class="gallery-modal modal fade" id="Honey_<%= honey.id %>" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-      <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-      <div class="modal-content">
-        <%= image_tag honey.honeyimg.small.url %>
-        <p class="item-intro">
-          <% if I18n.locale == :hu %>
-            <%= honey.description_hu %>
-          <% elsif I18n.locale == :de %>
-            <%= honey.description_de %>
-          <% else %>
-            <%= honey.description_en %>
-          <% end %>
-<!--           <br>
-          <%= link_to 'Next honey', "#Honey_#{honey.next.ids.first}", class: "gallery-link", data: { dismiss: "modal", toggle: "modal" } %>
- -->
-         </p>
-      </div>
-    </div>
-  </div>
-<% end %>

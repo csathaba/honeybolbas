@@ -1,0 +1,7 @@
+<% if I18n.locale == :hu %>
+  <%= honey.description_hu %>
+<% elsif I18n.locale == :de %>
+  <%= honey.description_de %>
+<% else %>
+  <%= honey.description_en %>
+<% end %>
