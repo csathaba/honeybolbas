@@ -17,3 +17,7 @@
 //= require turbolinks
 //= require lightbox
 //= require_tree .
+
+lightbox.option({
+      'showImageNumberLabel': false
+    })
