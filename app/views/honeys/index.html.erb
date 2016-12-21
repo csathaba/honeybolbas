@@ -6,6 +6,7 @@
   <table>
     <thead>
       <tr>
+        <th>Rank</th>
         <th>Image</th>
         <th>Name</th>
         <th>Description hu</th>
@@ -19,6 +20,7 @@
     <tbody>
       <% @honeys.each do |honey| %>
         <tr>
+          <td><%= honey.rank %></td>
           <td><%= image_tag honey.honeyimg.thumb.url %></td>
           <td><%= honey.name %></td>
           <td><%= honey.description_hu %></td>

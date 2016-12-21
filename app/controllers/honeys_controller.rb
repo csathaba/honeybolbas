@@ -5,7 +5,7 @@ class HoneysController < ApplicationController
   # GET /honeys
   # GET /honeys.json
   def index
-    @honeys = Honey.all
+    @honeys = Honey.all.order(:rank)
   end
 
   # GET /honeys/1
@@ -70,6 +70,6 @@ class HoneysController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def honey_params
-      params.require(:honey).permit(:name, :description_hu, :description_en, :description_de, :honeyimg, :orientation_landscape)
+      params.require(:honey).permit(:name, :description_hu, :description_en, :description_de, :honeyimg, :orientation_landscape, :rank)
     end
 end
