@@ -1,0 +1,8 @@
+<%= link_to honey.honeyimg.small.url, class: "gallery-link", data: { lightbox: "gallery", title: render(partial: "data_title", locals: {honey: honey}) } do %>
+  <div class="gallery-hover">
+    <div class="gallery-hover-content">
+      <i class="fa fa-search-plus fa-3x"></i>
+    </div>
+  </div>
+  <%= image_tag honey.honeyimg.small.url, class: "img-responsive img-rounded img-honey" %>
+<% end %>
