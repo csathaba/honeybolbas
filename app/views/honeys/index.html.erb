@@ -7,6 +7,7 @@
     <thead>
       <tr>
         <th>Rank</th>
+        <th>Rank up</th>
         <th>Image</th>
         <th>Name</th>
         <th>Description hu</th>
@@ -21,6 +22,8 @@
       <% @honeys.each do |honey| %>
         <tr>
           <td><%= honey.rank %></td>
+          <td><%= link_to '+', rank_up_honey_path(honey) %> </td>
+          <%#= link_to '+', honeys_rank_up_path(:id => honey.id) %>
           <td><%= image_tag honey.honeyimg.thumb.url %></td>
           <td><%= honey.name %></td>
           <td><%= honey.description_hu %></td>
@@ -38,4 +41,9 @@
   <br>
 
   <%= link_to 'New Honey', new_honey_path %>
+
+  <br>
+
+  <%= link_to 'Set ranks', honeys_set_ranks_path %>
+
 </div>

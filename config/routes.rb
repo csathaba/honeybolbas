@@ -2,7 +2,14 @@ Rails.application.routes.draw do
   devise_for :users
   get 'welcome/index'
   get 'main/index'
-  resources :honeys
+
+  get 'honeys/set_ranks'
+
+  resources :honeys do
+    member do
+      get 'rank_up'
+    end
+  end
 
   root :to => 'welcome#index'
 

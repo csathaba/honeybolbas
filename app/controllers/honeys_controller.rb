@@ -62,6 +62,16 @@ class HoneysController < ApplicationController
     end
   end
 
+  def set_ranks
+    Honey.first.set_ranks
+    redirect_to honeys_url, notice: 'Ranks set successfully.'
+  end
+
+  def rank_up
+    Honey.find(params[:id]).rank_up
+    redirect_to honeys_url
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_honey
