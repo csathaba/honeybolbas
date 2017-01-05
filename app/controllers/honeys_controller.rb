@@ -72,6 +72,11 @@ class HoneysController < ApplicationController
     redirect_to honeys_url
   end
 
+  def rank_down
+    Honey.find(params[:id]).rank_down
+    redirect_to honeys_url
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_honey

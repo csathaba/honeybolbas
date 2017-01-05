@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :honeys do
     member do
       get 'rank_up'
+      get 'rank_down'
     end
   end
 
