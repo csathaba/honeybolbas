@@ -5,7 +5,7 @@ class HoneysController < ApplicationController
   # GET /honeys
   # GET /honeys.json
   def index
-    @honeys = Honey.all.order(:rank)
+    @honeys = Honey.all.order(:orientation_landscape, :rank)
   end
 
   # GET /honeys/1
