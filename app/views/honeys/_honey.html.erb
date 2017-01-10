@@ -1,0 +1,16 @@
+<tr>
+  <td><%= honey.rank %></td>
+  <td>
+    <%= link_to rank_up_honey_path(honey), remote: true do %><i class="fa fa-caret-up fa-2x"></i><% end %><br>
+    <%= link_to rank_down_honey_path(honey), remote: true do %><i class="fa fa-caret-down fa-2x"></i><% end %>
+  </td>
+  <td><%= image_tag honey.honeyimg.thumb.url %></td>
+  <td><%= honey.name %></td>
+  <td><%= honey.description_hu %></td>
+  <td><%= honey.description_en %></td>
+  <td><%= honey.description_de %></td>
+  <td><%= honey.orientation_landscape %></td>
+  <td><%= link_to 'Show', honey %></td>
+  <td><%= link_to 'Edit', edit_honey_path(honey) %></td>
+  <td><%= link_to 'Delete', honey, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</tr>

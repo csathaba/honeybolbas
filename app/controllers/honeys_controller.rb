@@ -69,12 +69,20 @@ class HoneysController < ApplicationController
 
   def rank_up
     Honey.find(params[:id]).rank_up
-    redirect_to honeys_url
+    @honeys = Honey.all.order(:orientation_landscape, :rank)
+    respond_to do |format|
+      format.html { redirect_to honeys_url }
+      format.js {}
+    end
   end
 
   def rank_down
     Honey.find(params[:id]).rank_down
-    redirect_to honeys_url
+    @honeys = Honey.all.order(:orientation_landscape, :rank)
+    respond_to do |format|
+      format.html { redirect_to honeys_url }
+      format.js {}
+    end
   end
 
   private

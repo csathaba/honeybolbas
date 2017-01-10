@@ -1,7 +1,7 @@
 <br>
 <br>
 
-<div class="skinny_wrapper wrapper_padding">
+<div class="skinny_wrapper wrapper_padding" >
   <h1>Honeys</h1>
   <table>
     <thead>
@@ -18,26 +18,8 @@
       </tr>
     </thead>
 
-    <tbody>
-      <% @honeys.each do |honey| %>
-        <tr>
-          <td><%= honey.rank %></td>
-          <td>
-            <%= link_to rank_up_honey_path(honey) do %><i class="fa fa-caret-up fa-2x"></i><% end %><br>
-            <%= link_to rank_down_honey_path(honey) do %><i class="fa fa-caret-down fa-2x"></i><% end %>
-          </td>
-          <%#= link_to '+', honeys_rank_up_path(:id => honey.id) %>
-          <td><%= image_tag honey.honeyimg.thumb.url %></td>
-          <td><%= honey.name %></td>
-          <td><%= honey.description_hu %></td>
-          <td><%= honey.description_en %></td>
-          <td><%= honey.description_de %></td>
-          <td><%= honey.orientation_landscape %></td>
-          <td><%= link_to 'Show', honey %></td>
-          <td><%= link_to 'Edit', edit_honey_path(honey) %></td>
-          <td><%= link_to 'Delete', honey, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-      <% end %>
+    <tbody id="honey_list">
+      <%= render @honeys %>
     </tbody>
   </table>
 
@@ -48,5 +30,4 @@
   <br>
 
   <%= link_to 'Initialize ranks', honeys_set_ranks_path %>
-
 </div>
