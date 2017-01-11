@@ -5,7 +5,7 @@ class HoneysController < ApplicationController
   # GET /honeys
   # GET /honeys.json
   def index
-    @honeys = Honey.all.order(:orientation_landscape, :rank)
+    set_honeys
   end
 
   # GET /honeys/1
@@ -69,7 +69,7 @@ class HoneysController < ApplicationController
 
   def rank_up
     Honey.find(params[:id]).rank_up
-    @honeys = Honey.all.order(:orientation_landscape, :rank)
+    set_honeys
     respond_to do |format|
       format.html { redirect_to honeys_url }
       format.js {}
@@ -78,7 +78,7 @@ class HoneysController < ApplicationController
 
   def rank_down
     Honey.find(params[:id]).rank_down
-    @honeys = Honey.all.order(:orientation_landscape, :rank)
+    set_honeys
     respond_to do |format|
       format.html { redirect_to honeys_url }
       format.js {}
@@ -89,6 +89,10 @@ class HoneysController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_honey
       @honey = Honey.find(params[:id])
+    end
+
+    def set_honeys
+      @honeys = Honey.all.order(:orientation_landscape, :rank)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
