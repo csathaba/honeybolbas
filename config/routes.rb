@@ -18,6 +18,7 @@ Rails.application.routes.draw do
     root :to => 'main#index'
     get "main/index"
     resources :honeys
+    resources :contacts
   end
   get "de/main/index"
   get "en/main/index"
